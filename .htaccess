@@ -1,0 +1,7 @@
+php_flag display_errors On
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^calculator/([^/]+)/([^/]+)/([^/]+)$ calculator.php?operacion=$1&num1=$2&num2=$3 [L,QSA]
